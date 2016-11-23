@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Testing";
+}
+
+<h2>Testing</h2>
+
+
+
+<p>
+    <button onclick="myMove()">Click Me</button>
+    <button onclick="myMove2()">Then Click Me</button>
+    <button onclick="myMove3()">And Then Me</button>
+    <button onclick="myMove4()">And Then Me</button>
+</p>
+
+
+    <div id="animate"></div>
+
+<script>
+
+function myMove() {
+  var elem = document.getElementById("animate");
+  var pos = 200;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 300) {
+      clearInterval(id);
+    }
+    else {
+      pos++;
+      elem.style.top = pos + 'px';
+    }
+  }
+}
+    function myMove2()
+{
+        var elem2 = document.getElementById("animate");
+        var pos2 = 0;
+        var id2 = setInterval(frame, 10);
+        function frame()
+        {
+            if (pos2==300)
+            {
+                clearInterval(id2);
+            }
+            else
+            {
+                pos2++;
+                elem2.style.left = pos2 + 'px';
+            }
+        }
+    }
+    function myMove3() {
+        var elem3 = document.getElementById("animate");
+        var pos3 = 0;
+        var id3 = setInterval(frame, 10);
+        function frame() {
+            if (pos3 == 500) {
+                clearInterval(id3);
+            }
+            else {
+                pos3++;
+                elem3.style.bottom = pos3 + 'px';
+            }
+        }
+    }
+    function myMove4() {
+        var elem4 = document.getElementById("animate");
+        var pos4 = 200;
+        var id4 = setInterval(frame, 10);
+        function frame() {
+            if (pos4 == 400) {
+                clearInterval(id4);
+            }
+            else {
+                pos4++;
+                elem4.style.right = pos4 + 'px';
+            }
+        }
+    }
+</script>

@@ -1,0 +1,41 @@
+﻿
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        #animate {
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-bottom: 50px; margin-right: 60vw;">
+        <h2 style="border:3px solid;">@Html.ActionLink("TESTING","Testing") | @Html.ActionLink("NVM, GO BACK", "Index")</h2>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
